@@ -1,0 +1,33 @@
+public class kthsmallest{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println(Arrays.toString(arr));
+
+        boolean check = sortt(arr,n);
+        
+        if(check == true){
+            System.out.println("The array is sorted");
+        }
+        else{
+            System.out.println("Unsorted array");
+     }
+}
+
+    static boolean sortt(int[] arr, int n){
+    for(int i= 1;i<n;i++){
+            if(arr[i] >=  arr[i-1]){
+                
+            }
+            else{
+                return false;
+            }
+        }
+        return true;
+    }
+}
